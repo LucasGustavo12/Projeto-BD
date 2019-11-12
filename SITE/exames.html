@@ -1,0 +1,40 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Exames
+		</title>
+	</head>
+	<body>
+		        <h2>CADASTRO DE EXAMES</h2><hr>
+				
+		<form action="gravarExames.php" method="POST" enctype="multipart/form-data">
+	
+		Codigo da Receita:		
+						
+	 <input type="text" name="cod_receita" placeholder="Digite o codigo da receita" 
+		id="cod_receita" maxlength="50" size="20"  required><br><br>
+		Tipo de exame:
+		<input type="text" name ="nm_exame" placeholder = "Digite o nome do exame"
+		id="nm_exame" maxlength="50" size="20"><br>				
+
+		Descrição do exame:<br>
+		<textarea name="ds_obs" id="ds_obs" rows="10" cols="50"></textarea><br>
+		
+			
+	
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Limpar Dados">
+				
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+

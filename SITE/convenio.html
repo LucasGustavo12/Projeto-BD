@@ -1,0 +1,79 @@
+
+
+<html>
+	<header>
+		<title>Convênio</title>
+	</header>
+	<body>
+	<h2>Convênio</h2>
+<form action="gravarconvenio.php"
+			  method="post"
+			  enctype="multipart/form-data">
+			 <b> 
+					 
+			 Código do Convênio:
+			  <input type="text"
+					 name="codigoConvenio"
+					 id="codigoConvenio"
+					 maxlength="4"
+					 size="2px"
+					 required >
+					 <br>
+					 <br>
+					 
+					 Nome do Paciente:
+			  <input type="text"
+					 name="nomePaciente"
+					 id="nomePaciente"
+					 maxlength="40"
+					 size="15px"
+					 required >
+					 <br>
+					 <br>
+			  
+			 
+			  Número do Convênio:
+			  <input type="text"
+					 name="numeroConvenio"
+					 id="numeroConvenio"
+					 maxlength="17"
+					 placeholder="Somente números"
+					 size="30px"
+					 required>
+					 <br>
+					 <br>
+			  
+			 Data de Início:
+			  <input	type="date"
+						name="dataInicio"
+						id="dataInicio"
+						min="1994-01-01"
+						max="2019-12-31">
+					 <br>
+					 <br>
+					 
+			 Região:
+			  <input type="text"
+					 name="regiao"
+					 id="regiao"
+					 maxlength="17"
+					 placeholder="Informe a região"
+					 size="15px"
+					 required>
+					 <br>
+					 <br>
+		     
+							
+					 
+			  <hr>
+			  
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Limpar Dados">
+			
+			</b>
+		</form>
+		</body>
+
+</html>
+		
+

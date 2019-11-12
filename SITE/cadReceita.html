@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+<h2> cadastro de receitas</h2>
+<form 	action="receitas.php"
+			method="post">
+			código da receita:
+			<input type = "int" name="cod_receita"
+				   id = "cod_receita"  maxlength="11"
+				   size="25"> <br>
+			código do paciente:
+			<input type="int" name="cod_paciente"
+			id="cod_paciente" maxlength="11"
+			size="25"> <br>
+			código do médico:
+			<input type="int" name="cod_medico"
+			id="cod_medico" maxlength="11"
+			size="25"> <br>
+			Data do registro:
+					<input type="date"
+							name="dt_receita"
+							min="2018-02-20"
+							max="2019-12-31">
+						<br>
+			código do medicamento:
+			<input type="int" name="cod_medicamento"
+			id="cod_medicamento" maxlength="11"
+			size="25"> <br>
+			código do exame:
+			<input type="int" name="cod_exame"
+			id="cod_exame" maxlength="11"
+			size="25"> <br>
+			código da clinica:
+			<input type="int" name="cod_clinica"
+			id="cod_clinica" maxlength="11"
+			size="25"> <br>
+			Observações:
+			<input type="text" name="ds_obs"
+			id="ds_obs" maxlength="120"
+			size="120"> <br>
+			
+	 		<input type="submit" value="Cadastrar">
+			</body>
+</html>

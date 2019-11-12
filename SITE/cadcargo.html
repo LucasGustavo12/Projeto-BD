@@ -1,0 +1,26 @@
+
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de cargos</title>
+</head>
+<body>
+    <h1>Cadastro Cargos</h1>
+    <form action="gravarCargo.php" method="post">
+        <fieldset>
+        Nome do Cargo:<br>
+        <input type="text" name="ncargo" id="ncargo"
+        placeholder="Digite o nome do cargo"
+        size="36"><br>
+        Descrição do Cargo <br>
+        <textarea name="dscargo" id="dscargo" cols="30" rows="10"></textarea>
+        </fieldset>
+        <hr>
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar Dados">
+
+    </form>
+</body>
+</html>

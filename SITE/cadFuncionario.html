@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Funcionários</title>
+</head>
+<body>
+        <h1>Cadastro de funcionÃ¡rios</h1>
+        <fieldset>
+        <form action="gravarFuncionario.php"
+        method="POST" enctype="multipart/form-data">
+        <!--Código id do Funcionário <br>
+        <input type="number" name="codfuncio"
+        id="codfuncio" placeholder="MÃ¡ximo 3 caracteres"
+        min="01" max="999"><br> -->
+    
+        Nome completo: <br>
+        <input type="text" name="nomefuncio"
+        id="nomefuncio" maxlength="40"
+        size="36" placeholder="Informe o nome completo"><br>
+        
+        NÂ° RG:<br>
+        <input type="text" name="rgfuncio"
+        id="rgfuncio" placeholder="Somente nÃºmeros"><br>
+    
+        NÂ° CPF:<br>
+        <input type="text" name="cpffuncio"
+         id="cpffuncio" placeholder="Somente nÃºmeros"><br><br>
+    
+        Código cargo:
+        <input type = "number" name="codcargo"
+        placeholder="Maximo 2 caracteres"
+        id="codcargo"
+        min="01" max="99"
+        ><br>
+        </fieldset>
+    
+        
+        Endereço:<br>
+        <textarea name="nmendereco" 
+        id="nmendereco" cols="30" rows="5">
+        </textarea><br>
+        Número:
+        <input type="number" name="numero"
+        id="numero"> <br>
+        Bairro:
+        <input type="text" name="bairro"
+        id="bairro">
+        Cep:
+        <input type="number" name="cep"
+        id="cep"><br>
+        
+        
+        
+        Telefones:<br>
+         <input type="text" name="telres" 
+         id="telRes" placeholder="Res: (00) 0000-0000">
+         <br>
+         <input type="text" name="telcel"
+         id="telCel" placeholder="Cel: (00) 00000-0000">
+         <br>
+         <br>
+         <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar Dados">
+        </form>
+</body>
+</html>

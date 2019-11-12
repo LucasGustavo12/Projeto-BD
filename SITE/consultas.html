@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Consulta</title>
+</head>
+<body>
+    <h1>Cadastro de Consulta</h1>
+    <form action="gravarConsulta.php" method="POST"
+    enctype="multipart/form-data">
+    <fieldset>
+        Informe a data da consulta:<br>
+        <input type="date" name="dtconsulta"
+        id="dtconsulta"><br>
+    
+        Horário da consulta:<br>
+        <input type="time" name="hconsulta"
+        id="hconsulta" min="06:00:00"
+        max="23:00:00"><br>
+    </fieldset>
+    <hr>
+        Código do paciente:<br>
+        <input type="number" name="idpaciente"
+        id="idpaciente" placeholder="Digite atÃ© 4 caracteres"
+        min="0000" max="9999"><br>
+
+        Nome do paciente:<br>
+        <input type="text" name="npaciente"
+        maxlength="40" size="36"
+        id="npaciente" placeholder="Digite o nome do paciente"
+        ><br>
+
+        Possui convenio:<br>
+        <input type="number" name="pconvenio"
+        id="pconvenio" placeholder="0(NÃ£o) 1(sim)"
+        min="0" max="1"> 
+    <fieldset>
+        Médico:<br>
+        <input type="text" name="nmmedico"
+        id="nmmedico" maxlength="40" size="35"
+        placeholder="Digite o nome do mÃ©dico"
+        ><br>
+
+        Tipo de consulta:<br>
+        <input type="text" name="tconsulta"
+        id="tconsulta" placeholder="Selecione o tipo de consulta"
+        required
+        maxlength="40" size="35"
+        list="listaconsulta">
+
+        <datalist id="listaconsulta">
+				<option value="Ortopedia">
+				<option value="Raio-X">
+				<option value="Checkup">
+				<option value="Tomografia">
+				<option value="Vacina">
+                <option value="Eletrocardiograma">
+		</datalist>
+    </fieldset>
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar Dados">
+    </form>
+    
+</body>
+</html>

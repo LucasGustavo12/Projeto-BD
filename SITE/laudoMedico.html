@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Laudo Médico</title>
+	</head>
+	<body>
+	<h2>Laudo Médico</h2>
+		<form	method="post"
+				enctype="multipart/form-data"
+				action="cadLaudo.php">
+			<fieldset>
+			<input	type="hidden"
+					name="cod_laudo"
+					id="cod_laudo"
+					max="1000"
+					min="01"
+					placeholder="Digite o numero do Laudo">
+		Nome do Paciente:
+			<input	type="text"
+					name="nm_paciente"
+					id="nm_paciente"
+					maxlength="30"
+					size="30"
+					placeholder="Digite o nome do paciente"> <br>
+			Nome do Médico:
+			<input	type="text"
+					name="nm_medico"
+					id="nm_medico"
+					maxlength="30"
+					size="30"
+					placeholder="Digite o nome do médico"> <br>
+			
+			Data Laudo:
+			<input	name="dt_laudo"
+					type="date"
+					id="dt_laudo"
+					><br>
+			Horario Laudo:
+			<input	name="hr_laudo"
+					type="time"
+					id="hr_laudo"
+					><br>
+			Anexar exame:
+			<input	type="file"
+					name="an_exame"
+					id="an_exame"><br>
+			Carimbo médico:
+			<input	type="text"
+					id="car_medico"
+					name="car_medico"> <br>
+			Descrição do Laudo:<br>
+			<textarea	name="ds_laudo"
+						id="ds_laudo"
+						rows="4"
+						cols="50">
+			</textarea><br>
+			</fieldset>
+			Enviar:
+			<input	type="submit"
+					value="enviar"
+					name="enviar">
+			Limpar:
+			<input	type="reset"
+					value="limpar"
+					name="limpar">
+		</form>			
+	</body>
+</html>

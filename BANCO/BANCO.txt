@@ -1,0 +1,158 @@
+use clinica;
+
+create table cargo(
+    cod_cargo 	int (11) auto_increment primary key,
+
+    nm_cargo  	varchar(25)                        ,
+
+    ds_cargo	varchar (250)
+
+);
+
+ create table consultas(
+
+ cod_consulta 	int (11) auto_increment primary key,
+
+ dt_consulta 	date                               ,
+
+ horario 	time                               ,
+
+ cod_paciente 	int(11)                            ,
+
+ nome_paciente  varchar(15)                        ,
+
+ convenio 	boolean                            ,
+
+ medico 	varchar (20)                       ,
+
+ tipo_consulta 	varchar(40)
+
+);
+
+ create table funcionario (
+
+ cod_funcionario int (3) auto_increment primary key,
+
+ nm_funcionario	        varchar(40)                ,
+
+ nr_rg			varchar(13)                ,
+
+ nr_cpf			varchar(15)                ,
+
+ cod_cargo		int(2)                     ,
+
+ ds_endereco		varchar(30)                ,
+
+ nr_numero		int(6)                     ,
+
+ nr_cep		        int(11)                    ,
+
+ ds_bairro		varchar(30)                ,
+
+ nr_telres		int(11)                    ,
+
+ nr_telcel		varchar(12)
+
+);
+
+CREATE TABLE medicamento
+ (
+cod_medicamento int(11) auto_increment PRIMARY KEY ,
+ ds_substancia VARCHAR(200)                          ,
+
+ ds_contraind VARCHAR(200)                           ,
+
+ ds_generico VARCHAR(200)
+
+ );
+
+ CREATE TABLE exames
+ (
+cod_exame int(11) auto_increment PRIMARY KEY                    ,
+
+ cod_receita int(11)                                              ,
+
+ nm_exame varchar(12)                                             ,
+
+ ds_obs varchar(250)
+
+ );
+
+create table receitas(
+
+   	cod_receita  		int (11) auto_increment primary key,
+
+   	cod_paciente 		int (11),
+
+   	cod_medico   		int (11),
+
+   	dt_receita   		date,
+
+   	cod_medicamento		int (11),
+
+  	cod_exame 		int (11),
+
+  	cod_clinica 		int (11),
+
+   	ds_obs 			varchar (120)
+
+	 );
+
+create table medicos (
+	cod_medico int(11) auto_increment primary key,
+	cod_laudo int(11),
+	nm_medico varchar(80),
+	nr_rg int(9),
+	nr_cpf int(11),
+	nr_crm int(15),
+	ds_area varchar(80),
+	nm_usuario varchar(30),
+	ds_senha int(20)
+	);
+
+create table pacientes(
+       cod_paciente int(11)auto_increment primary key,
+       cod_laudo int(11),
+       nm_paciente varchar(30),
+       nmr_cpf int(11),
+       nmr_rg int(11),
+       nm_pai varchar(30),
+       nm_mae varchar(30),
+       num_carteira int(11),
+       ds_endereco varchar(40),
+       num_telres int(11),
+       num_telcel int(11),
+       email varchar(30)
+       );
+
+       create table laudo(
+       cod_laudo int(11)auto_increment primary key,
+       nm_paciente varchar(40),
+       nm_medico varchar(40),
+       dt_laudo date,
+       hr_laudo time,
+       an_exame varchar(100),
+       car_medico varchar(20),
+       ds_laudo varchar(30)
+       );
+
+ CREATE TABLE local (
+  cod_local   INT (15) AUTO_INCREMENT PRIMARY KEY,
+  cod_exame   INT (10),
+  num_clinica INT (4),
+  ds_endereco VARCHAR (100),
+  nm_telefone INT (13),
+  ds_obs      VARCHAR (100)
+  );
+
+
+
+  CREATE TABLE convenio (
+  cod_convenio  INT (4) AUTO_INCREMENT PRIMARY KEY,
+  nome_paciente VARCHAR(40),
+  num_convenio  INT(17),
+  data_inicio   DATE,
+  regiao        VARCHAR(17) 
+
+ );
+
